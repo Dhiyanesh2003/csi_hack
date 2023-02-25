@@ -1,3 +1,21 @@
+<?php
+session_start();
+
+$user_id = $_SESSION["user_id"];
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "organi5";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+
+?>
 <html>
   <head>
     <title>Farm Com</title>
@@ -67,43 +85,48 @@
 
     <div class="container">
       <br />
-      <div class="cont">
+
+      
+      <?php
+
+      $sql = "SELECT * FROM forum order by id desc;";
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        echo "
+        <div class='cont'>
+          <h3>".$row['name']."</h3>
+          <hr />
+          <p>
+            ".$row['message']."
+          </p>
+          <h6></h6>
+        </div>
+        ";
+      }
+      }
+      ?>
+
+      <!-- <div class="cont">
         <h3>Mrs. S. Swetha Shri</h3>
-        <p>Consumer</p>
         <hr />
         <p>
           I want to donate something to the farmers who are not in a good
           position to harvest their crops !<br />What should I do ??
         </p>
         <h6></h6>
-      </div>
+      </div> -->
 
-      <div class="cont">
-        <h3>Mr. D. Ankush</h3>
-        <p>Farmer</p>
-        <hr />
-        <p>
-          Many farmers are in need of seeds and fertilizers !! Pls ask them for
-          contact info via this forum<br />And do what you can atmost !!
-        </p>
-      </div>
+      <!-- INSERT INTO `forum` (`id`, `message`) VALUES ('1001', 'I want to donate something to the farmers who are not in a good\r\n          position to harvest their crops !<br />What should I do ??'); -->
 
-      <div class="cont">
-        <h3>Mr. R. Raja</h3>
-        <p>Farmer</p>
-        <hr />
-        <p>
-          I am a Thanjavur farmer and i m in need of fertilizers !!<br />My
-          contact number is : 4854837383 !!<br />This will be a great help for
-          me !! <br />Live Long happily and healthily !!
-        </p>
-      </div>
       <br />
     </div>
     <div>
-      <form class="msg" action="">
-        <input type="text" placeholder="Type your message here !!" />
-        <input class="btn" type="sumbit" value="Send" />
+      <form class="msg" action="forum.php" method="POST">
+        <input type="text" name="message" placeholder="Type your message here !!" />
+        <input class="btn btn-block text-white login-button" type="submit" value="Send" />
       </form>
     </div>
   </body>
