@@ -30,7 +30,7 @@ $user += 1;
 ?>
 <html>
     <head>
-		<title>We Farm</title>
+		<title>Farm Com</title>
 		<link rel="shortcut icon" href="logo.jpeg" />
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">

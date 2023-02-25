@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>We Farm</title>
+		<title>Farm Com</title>
 		<link rel="shortcut icon" href="logo.jpeg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -10,33 +10,31 @@
 		<link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
 		<style>
 			.cont{
-				padding-top: 70px;
-				padding-bottom: 70px;
+				padding-top: 40px;
+				padding-bottom: 40px;
 				display: grid;
-				grid-template-columns: 1fr 3fr 4fr 1fr;
+				grid-template-columns: 3fr 4fr;
 				margin-left: 30%;
 				margin-top: 50px;
 				width: 40%;
 				margin-right: 30%;
 				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.1);
 			}
-			.btn{
-				margin-top: 70px;
+			#btn{
 				padding: 15px;
 				width: 150px;
 				background-color: black;
 				color: white;
 				font-size: 20px;
 				border-radius: 15px;
+				margin-bottom: 15px;
 				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.1);
 			}
-			.btn:hover{
+			#btn:hover{
 				background-color: white;
 				color: black;
 				cursor: pointer;
 			}
-			
-			
 			
 			.aa{
 				text-decoration: none;
@@ -161,13 +159,19 @@
 			input{
 				margin-bottom: 50px;
 			}
+			.cont label{
+				margin-left: 50px;
+			}
+			.cont input{
+				margin-right: 50px;
+			}
 		</style>
 	</head>
 	<body>
 		<header>
 			<div class="contt">
 				<div>
-					<h1 class="h1"><span class="bl">Organi</span><span class="gr">5</span></h1>
+					<h1 class="h1"><span class="bl">Far</span><span class="gr">Com</span></h1>
 				</div>
 				<a class="aa" href="farmer_home.html">
 					<div class="item">
@@ -209,24 +213,33 @@
 		</header><hr>
 		<main>
 			<div class="container">
-				<form action="">
+				<form action="sell.php" method="POST">
 					<div class="cont">
-						<div></div>
-						<label class="a">Vegetable Name:</label>
-						<input class="a" type="text" required/>
-						<div></div>
-						<div></div>
-						<label class="a">Produced Date:</label>
-						<input class="a" type="text" required>
-						<div></div>
-						<div></div>
+						<label class="a">Product Name:</label>
+						<input class="a" name="name" type="text" required/>
+						<label class="a">Produced Manufacture Date:</label>
+						<input class="a" name="mfd" type="date" required>
+						<label class="a">Produced Expiry Date:</label>
+						<input class="a" name="exp" type="date" required>
 						<label class="a">Quantity:</label>
-						<input class="a" type="text" required/>
-						<div></div>
+						<input class="a" name="quantity" type="text" required/>
+						<label class="a">Cost:</label>
+						<input class="a" name="cost" type="text" required/>
+						<label class="a">Description:</label>
+						<input class="a" name="description" type="text" required/>
+						<label class="a">Product Image:</label>
+						<input class="a" name="img" type="file" accept="image/*" required/>
+						<div class="dummy"></div>
+						<center><input id="btn" type="submit" value="Post" /></center>
 					</div>
-					<center><input class="btn" type="submit" value="Post" /></center>
+					
 				</form>
 			</div>
 		</main>
 	</body>
 </html>
+
+
+<!-- INSERT INTO `products` (`p_id`, `f_id`, `name`, `mfd`, `exp`, `quantity`, `cost`, `description`, `img`)
+	 VALUES ('1001', '1001', 'Onion', '25/2/2023', '28/2/2023', '5', '12', 'onion is good for health <br>\r\nit is very much nutritious <br>
+	 \r\nit is good for our well being <br>\r\nit is rich in proteins and vitamins', '../../images/1001_1001.jpg'); -->
