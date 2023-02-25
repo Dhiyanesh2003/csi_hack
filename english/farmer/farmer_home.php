@@ -22,7 +22,7 @@
           <span class="bl">Organi</span><span class="gr">5</span>
         </h1>
       </div>
-      <a class="aa current" href="farmer_home.html">
+      <a class="aa current" href="farmer_home.php">
         <div class="item">
           <h4>Home</h4>
         </div>
