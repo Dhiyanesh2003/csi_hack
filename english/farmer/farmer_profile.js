@@ -62,7 +62,7 @@ const save_input = () => {
     new_mailId +
     "</span><label class='det'>Address: </label><span id='address'> " +
     new_address +
-    "</span>";
+    "</span><br>";
   let edit_button = document.getElementById("edit_button");
   edit_button.style.display = "block";
   let save_button = document.getElementById("save_button");
