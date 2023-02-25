@@ -63,56 +63,171 @@
 			<h1 class="tode">Today's Deals</h1>
 		</center>
 		<div class="Deals">
-			<div>
-				<center>
+
+			<div class="card">
+				<div class="img_cont">
+					<img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+				</div>
+				<div class="pro_name">
+					<span>Onions</span>
+				</div>
+				<div class="pro_price">
+					<span>Only at Rs.30/Kg</span>
+				</div>
+				<div class="but_cont">
 					<a class="linkss" href="consumer_product_page.html">
-						<img class="deal" src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-						<div class="onto">
-							<h2>Onions</h2>
-							<h2>Just @ Rs. 12/kg</h2>
-						</div>
+						<button>Check out the Recipe</button>
 					</a>
-				</center>
+				</div>
+				<div class="but_cont">
+					<button>Add to Cart</button>
+				</div>
 			</div>
-			<div>
-				<center>
+
+			<div class="card">
+				<div class="img_cont">
+					<img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+				</div>
+				<div class="pro_name">
+					<span>Onions</span>
+				</div>
+				<div class="pro_price">
+					<span>Only at Rs.30/Kg</span>
+				</div>
+				<div class="but_cont">
 					<a class="linkss" href="consumer_product_page.html">
-						<img class="deal" src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-						<div class="onto">
-							<h2>Onions</h2>
-							<h2>Just @ Rs. 12/kg</h2>
-						</div>
+						<button>Check out the Recipe</button>
 					</a>
-				</center>
+				</div>
+				<div class="but_cont">
+					<button>Add to Cart</button>
+				</div>
 			</div>
-			<div>
-				<center>
+			<div class="card">
+				<div class="img_cont">
+					<img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+				</div>
+				<div class="pro_name">
+					<span>Onions</span>
+				</div>
+				<div class="pro_price">
+					<span>Only at Rs.30/Kg</span>
+				</div>
+				<div class="but_cont">
 					<a class="linkss" href="consumer_product_page.html">
-						<img class="deal" src="https://images.unsplash.com/photo-1561635741-c416a5193b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" />
-						<div class="onto">
-							<h2>Potatoes</h2>
-							<h2>Just @ Rs. 30/kg</h2>
-						</div>
+						<button>Check out the Recipe</button>
 					</a>
-				</center>
+				</div>
+				<div class="but_cont">
+					<button>Add to Cart</button>
+				</div>
 			</div>
-			<div>
-				<center>
+			<div class="card">
+				<div class="img_cont">
+					<img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+				</div>
+				<div class="pro_name">
+					<span>Onions</span>
+				</div>
+				<div class="pro_price">
+					<span>Only at Rs.30/Kg</span>
+				</div>
+				<div class="but_cont">
 					<a class="linkss" href="consumer_product_page.html">
-						<img class="deal" src="https://images.unsplash.com/photo-1607305387299-a3d9611cd469?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9tYXRvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
-						<div class="onto">
-							<h2>Tomatoes</h2>
-							<h2>Just @ Rs. 10/kg</h2>
-						</div>
+						<button>Check out the Recipe</button>
 					</a>
-				</center>
+				</div>
+				<div class="but_cont">
+					<button>Add to Cart</button>
+				</div>
 			</div>
+
 		</div>
 		<center>
 			<h1 class="tode">Recipe Kits</h1>
 		</center>
 		<div class="Deals">
-			<div>
+			<div class="card">
+				<div class="img_cont">
+					<img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+				</div>
+				<div class="pro_name">
+					<span>Onions</span>
+				</div>
+				<div class="pro_price">
+					<span>Only at Rs.60/Kits</span>
+				</div>
+				<div class="but_cont">
+					<a class="linkss" href="consumer_recipe_kits.html">
+						<button>Check out the Kits</button>
+					</a>
+				</div>
+				<div class="but_cont">
+					<button>Add to Cart</button>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="img_cont">
+					<img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+				</div>
+				<div class="pro_name">
+					<span>Onions</span>
+				</div>
+				<div class="pro_price">
+					<span>Only at Rs.60/Kits</span>
+				</div>
+				<div class="but_cont">
+					<a class="linkss" href="consumer_recipe_kits.html">
+						<button>Check out the Kits</button>
+					</a>
+				</div>
+				<div class="but_cont">
+					<button>Add to Cart</button>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="img_cont">
+					<img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+				</div>
+				<div class="pro_name">
+					<span>Onions</span>
+				</div>
+				<div class="pro_price">
+					<span>Only at Rs.60/Kits</span>
+				</div>
+				<div class="but_cont">
+					<a class="linkss" href="consumer_recipe_kits.html">
+						<button>Check out the Kits</button>
+					</a>
+				</div>
+				<div class="but_cont">
+					<button>Add to Cart</button>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="img_cont">
+					<img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+				</div>
+				<div class="pro_name">
+					<span>Onions</span>
+				</div>
+				<div class="pro_price">
+					<span>Only at Rs.60/Kits</span>
+				</div>
+				<div class="but_cont">
+					<a class="linkss" href="consumer_recipe_kits.html">
+						<button>Check out the Kits</button>
+					</a>
+				</div>
+				<div class="but_cont">
+					<button>Add to Cart</button>
+				</div>
+			</div>
+
+			<!-- <div>
 				<center>
 					<a class="linkss" href="consumer_recipe_kits.html">
 						<img class="deal" src="https://images.unsplash.com/photo-1619096252214-ef06c45683e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FuZHdoaWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
@@ -123,39 +238,7 @@
 					</a>
 				</center>
 			</div>
-			<div>
-				<center>
-					<a class="linkss" href="consumer_recipe_kits.html">
-						<img class="deal" src="https://images.unsplash.com/photo-1607532941433-304659e8198a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8c2FsYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" />
-						<div class="onto">
-							<h2>Salads</h2>
-							<h2>Just @ Rs. 500/kit</h2>
-						</div>
-					</a>
-				</center>
-			</div>
-			<div>
-				<center>
-					<a class="linkss" href="consumer_recipe_kits.html">
-						<img class="deal" src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGFzdGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" />
-						<div class="onto">
-							<h2>Pasta</h2>
-							<h2>Just @ Rs. 100/kit</h2>
-						</div>
-					</a>
-				</center>
-			</div>
-			<div>
-				<center>
-					<a class="linkss" href="consumer_recipe_kits.html">
-						<img class="deal" src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cGFzdGF8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" />
-						<div class="onto">
-							<h2>Pasta</h2>
-							<h2>Just @ Rs. 100/kit</h2>
-						</div>
-					</a>
-				</center>
-			</div>
+			-->
 		</div>
 		<br><br><br><br>
 
