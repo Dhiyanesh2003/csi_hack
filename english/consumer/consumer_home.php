@@ -190,7 +190,7 @@
 		margin-bottom: 25px;
 		padding: 30px;
 		background-color: #5fc81e;
-		color: black;
+		color: white;
 		}
 
 	</style>

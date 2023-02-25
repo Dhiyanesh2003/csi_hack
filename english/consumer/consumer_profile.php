@@ -50,7 +50,6 @@
 				object-fit: cover;
 				text-decoration: none;
 				color: black;
-				border-botom: 1px solid #5FC81E;
 			}
 			.aa:hover{
 				cursor: pointer;
