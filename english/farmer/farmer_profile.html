@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="farmer_profile.css" />
-    <script src="farmer_profile.js"></script>
+    <script defer src="farmer_profile.js"></script>
   </head>
   <body>
     <header>
@@ -65,7 +65,7 @@
     </header>
     <hr />
     <main>
-      <form class="Details">
+      <!-- <form class="Details">
         <label class="det">User Name: </label>
         <input class="det" type="text" value="Dhiyanesh S" disabled />
         <label class="det">Phone Number: </label>
@@ -84,9 +84,35 @@
           value="2/158 Kalaimagal Nagar 2nd Cross Street, Karapakkam, Chennai 97"
           disabled
         /><br />
-      </form>
-      <form action="">
-        <center><input class="btn" type="submit" value="Edit" /></center>
+      </form> -->
+      <div id="profile_form" class="Details">
+        <label class="det">User Name: </label>
+        <span id="userName"></span>
+        <label class="det">Phone Number: </label>
+        <span id="phone"></span>
+        <label class="det">E-mail ID: </label>
+        <span id="mailId"></span>
+        <label class="det">Address: </label>
+        <span id="address"></span>
+      </div>
+      <form class="Button_cont">
+        <center>
+          <input
+            id="edit_button"
+            class="btn"
+            type="submit"
+            onclick="get_input()"
+            value="Edit"
+          />
+          <input
+            id="save_button"
+            style="display: none"
+            class="btn"
+            type="submit"
+            onclick="save_input()"
+            value="Save"
+          />
+        </center>
       </form>
       <br />
       <hr />

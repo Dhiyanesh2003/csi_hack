@@ -7,6 +7,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.Details span {
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .det {
   padding: 10px;
   text-align: left;
