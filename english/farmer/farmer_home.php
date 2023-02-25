@@ -77,8 +77,47 @@
 
     <!-- ============================ CK's work ==========================-->
 
+
     <div class="Deals">
-      <div class="card">
+      <?php
+      $servername = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "organi5";
+
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      // Check connection
+      if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+      }
+
+      $sql = "SELECT * FROM products;";
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+      // output data of each row
+      while($row = $result->fetch_assoc()) {
+        echo "
+        <div class='card'>
+          <div class='img_cont'>
+            <img src='https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' />
+          </div>
+          <div class='pro_name';>
+            <span>".$row['name']."</span>
+          </div>
+          <div class='pro_price'>
+            <span>$".$row['cost']."</span>
+          </div>
+          <div class='but_cont'>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+        ";
+      }
+      }
+      ?>
+      <!-- <div class="card">
         <div class="img_cont">
           <img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
         </div>
@@ -91,52 +130,9 @@
         <div class="but_cont">
           <button>Add to Cart</button>
         </div>
-      </div>
+      </div> -->
 
-      <div class="card">
-        <div class="img_cont">
-          <img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        </div>
-        <div class="pro_name">
-          <span>Carrots</span>
-        </div>
-        <div class="pro_price">
-          <span>$1.5</span>
-        </div>
-        <div class="but_cont">
-          <button>Add to Cart</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="img_cont">
-          <img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        </div>
-        <div class="pro_name">
-          <span>Tomato</span>
-        </div>
-        <div class="pro_price">
-          <span>$6</span>
-        </div>
-        <div class="but_cont">
-          <button>Add to Cart</button>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="img_cont">
-          <img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-        </div>
-        <div class="pro_name">
-          <span>Brinjal</span>
-        </div>
-        <div class="pro_price">
-          <span>$5</span>
-        </div>
-        <div class="but_cont">
-          <button>Add to Cart</button>
-        </div>
-      </div>
+      
 
 
 
