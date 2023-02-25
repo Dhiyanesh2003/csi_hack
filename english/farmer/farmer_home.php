@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Farm Com</title>
+    <title>We Farm</title>
     <link rel="shortcut icon" href="logo.jpeg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -239,7 +239,7 @@
       <div class="contt">
         <div>
           <h1 class="h1">
-            <span class="bl">Far</span><span class="gr">Com</span>
+            <span class="bl">Organi</span><span class="gr">5</span>
           </h1>
         </div>
         <a class="aa current" href="farmer_home.html">
@@ -355,16 +355,3 @@
     </main>
   </body>
 </html>
-<?php
-
-if (isset($_GET['id']) && $_GET['id'] == 1) {
-    echo '<script>
-            alert("Product added successfully !!");
-          </script>';
-}
-else if (isset($_GET['id']) && $_GET['id'] == -1) {
-  echo '<script>
-          alert("Product not added ! \n\nPlease try again later !");
-        </script>';
-}
-?>
