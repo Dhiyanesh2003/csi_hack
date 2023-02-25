@@ -1,152 +1,194 @@
 <html>
-  <head>
-    <title>We Farm</title>
-    <link rel="shortcut icon" href="logo.jpeg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Outfit&display=swap"
-      rel="stylesheet"
-    />
 
-    <script src="farmer_home.js"></script>
-    <link rel="stylesheet" href="farmer_home.css" />
-  </head>
-  <body onload="displayer('items')">
-    <header>
-      <div class="contt">
-        <div>
-          <h1 class="h1">
-            <span class="bl">Organi</span><span class="gr">5</span>
-          </h1>
+<head>
+  <title>We Farm</title>
+  <link rel="shortcut icon" href="logo.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet" />
+
+  <script src="farmer_home.js"></script>
+  <link rel="stylesheet" href="farmer_home.css" />
+</head>
+
+<body>
+  <header>
+    <div class="contt">
+      <div>
+        <h1 class="h1">
+          <span class="bl">Organi</span><span class="gr">5</span>
+        </h1>
+      </div>
+      <a class="aa current" href="farmer_home.html">
+        <div class="item">
+          <h4>Home</h4>
         </div>
-        <a class="aa current" href="farmer_home.html">
-          <div class="item">
-            <h4>Home</h4>
-          </div>
-        </a>
-        <a class="aa" href="farmer_orders.html">
-          <div class="item">
-            <h4>Orders</h4>
-          </div>
-        </a>
-        <a class="aa" href="farmer_sell.html">
-          <div class="item">
-            <h4>Sell</h4>
-          </div>
-        </a>
-        <a class="aa" href="farmer_forum.html">
-          <div class="item">
-            <h4>Forum</h4>
-          </div>
-        </a>
-        <a class="aa" href="farmer_leaderboard.html">
-          <div class="item">
-            <h4>Leaderboard</h4>
-          </div>
-        </a>
-        <a class="aa" href="farmer_profile.html">
-          <div class="item">
-            <h4>Profile</h4>
-          </div>
-        </a>
-        <div class="search">
-          <div class="search-box">
-            <input type="text" class="find" placeholder="Search" />
-            <button type="button" class="search-btn">Search</button>
-          </div>
+      </a>
+      <a class="aa" href="farmer_orders.html">
+        <div class="item">
+          <h4>Orders</h4>
+        </div>
+      </a>
+      <a class="aa" href="farmer_sell.html">
+        <div class="item">
+          <h4>Sell</h4>
+        </div>
+      </a>
+      <a class="aa" href="farmer_forum.html">
+        <div class="item">
+          <h4>Forum</h4>
+        </div>
+      </a>
+      <a class="aa" href="farmer_leaderboard.html">
+        <div class="item">
+          <h4>Leaderboard</h4>
+        </div>
+      </a>
+      <a class="aa" href="farmer_profile.html">
+        <div class="item">
+          <h4>Profile</h4>
+        </div>
+      </a>
+      <div class="search">
+        <div class="search-box">
+          <input type="text" class="find" placeholder="Search" />
+          <button type="button" class="search-btn">Search</button>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
+  <hr />
+  <main>
+    <div class="parallax-img"></div>
+    <center>
+      <div class="weatherWidget"></div>
+    </center>
+    <br />
     <hr />
-    <main>
-      <div class="parallax-img"></div>
+    <br />
+    <div>
       <center>
-        <div class="weatherWidget"></div>
+        <h1 class="tode">Market Price of Veggies today</h1>
       </center>
-      <br />
-      <hr />
-      <br />
-      <div>
+    </div>
+
+    <!-- ============================ CK's work ==========================-->
+
+    <div class="Deals">
+      <div class="card">
+        <div class="img_cont">
+          <img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+        </div>
+        <div class="pro_name">
+          <span>Onions</span>
+        </div>
+        <div class="pro_price">
+          <span>$3</span>
+        </div>
+        <div class="but_cont">
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img_cont">
+          <img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+        </div>
+        <div class="pro_name">
+          <span>Carrots</span>
+        </div>
+        <div class="pro_price">
+          <span>$1.5</span>
+        </div>
+        <div class="but_cont">
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img_cont">
+          <img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+        </div>
+        <div class="pro_name">
+          <span>Tomato</span>
+        </div>
+        <div class="pro_price">
+          <span>$6</span>
+        </div>
+        <div class="but_cont">
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="img_cont">
+          <img src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+        </div>
+        <div class="pro_name">
+          <span>Brinjal</span>
+        </div>
+        <div class="pro_price">
+          <span>$5</span>
+        </div>
+        <div class="but_cont">
+          <button>Add to Cart</button>
+        </div>
+      </div>
+
+
+
+
+      <!-- ============================ CK's work ==========================-->
+
+      <!-- <div>
         <center>
-          <h1 class="tode">Market Price of Veggies today</h1>
+          <div class="linkss">
+            <img class="deal" src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+            <div class="onto">
+              <h2>Onions</h2>
+              <h2>Just @ Rs. 12/kg</h2>
+            </div>
+          </div>
         </center>
       </div>
-
-      <!-- ============================ CK's work ==========================-->
-
-      <center>
-        <div class="products_container" id="prod_container">
-          <div></div>
-        </div>
-      </center>
-
-      <!-- ============================ CK's work ==========================-->
-
-      <!-- <div class="Deals">
-        <div>
-          <center>
-            <div class="linkss">
-              <img
-                class="deal"
-                src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-              />
-              <div class="onto">
-                <h2>Onions</h2>
-                <h2>Just @ Rs. 12/kg</h2>
-              </div>
+      <div>
+        <center>
+          <div class="linkss">
+            <img class="deal" src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
+            <div class="onto">
+              <h2>Onions</h2>
+              <h2>Just @ Rs. 12/kg</h2>
             </div>
-          </center>
-        </div>
-        <div>
-          <center>
-            <div class="linkss">
-              <img
-                class="deal"
-                src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
-              />
-              <div class="onto">
-                <h2>Onions</h2>
-                <h2>Just @ Rs. 12/kg</h2>
-              </div>
+          </div>
+        </center>
+      </div>
+      <div>
+        <center>
+          <div class="linkss">
+            <img class="deal" src="https://images.unsplash.com/photo-1561635741-c416a5193b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" />
+            <div class="onto">
+              <h2>Potatoes</h2>
+              <h2>Just @ Rs. 30/kg</h2>
             </div>
-          </center>
-        </div>
-        <div>
-          <center>
-            <div class="linkss">
-              <img
-                class="deal"
-                src="https://images.unsplash.com/photo-1561635741-c416a5193b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
-              />
-              <div class="onto">
-                <h2>Potatoes</h2>
-                <h2>Just @ Rs. 30/kg</h2>
-              </div>
+          </div>
+        </center>
+      </div>
+      <div>
+        <center>
+          <div class="linkss">
+            <img class="deal" src="https://images.unsplash.com/photo-1607305387299-a3d9611cd469?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9tYXRvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+            <div class="onto">
+              <h2>Tomatoes</h2>
+              <h2>Just @ Rs. 10/kg</h2>
             </div>
-          </center>
-        </div>
-        <div>
-          <center>
-            <div class="linkss">
-              <img
-                class="deal"
-                src="https://images.unsplash.com/photo-1607305387299-a3d9611cd469?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dG9tYXRvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-              />
-              <div class="onto">
-                <h2>Tomatoes</h2>
-                <h2>Just @ Rs. 10/kg</h2>
-              </div>
-            </div>
-          </center>
-        </div> 
+          </div>
+        </center>
       </div> -->
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
+
 </html>
