@@ -138,7 +138,7 @@
 				<div>
 					<h1 class="h1"><span class="bl">Far</span><span class="gr">Com</span></h1>
 				</div>
-				<a class="aa current" href="consumer_home.html">
+				<a class="aa current" href="consumer_home.php">
 					<div class="item">
 						<h4>Home</h4>
 					</div>

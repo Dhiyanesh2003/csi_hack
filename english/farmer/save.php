@@ -31,7 +31,7 @@ $EMAIL = $_POST['EMAIL'];
 $ADDRESS = $_POST['ADDRESS'];
 $sql = "INSERT INTO farmer_login VALUES ('" . $USER_ID . "','" . $USERNAME . "','" . $PASSWORD . "','" . $NUMBER . "','" . $EMAIL . "','" . $ADDRESS . "')";
 if ($conn->query($sql) === TRUE) {
-header("Location: farmer_login.php");
+header("Location: farmer_profile.php");
 } else {
 echo "Error: " . $sql . "<br>" . $conn->error;
 }

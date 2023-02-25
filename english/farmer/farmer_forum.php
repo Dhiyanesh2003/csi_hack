@@ -58,7 +58,7 @@ die("Connection failed: " . $conn->connect_error);
             <h4>Sell</h4>
           </div>
         </a>
-        <a class="aa current" href="farmer_forum.html">
+        <a class="aa current" href="farmer_forum.php">
           <div class="item">
             <h4>Forum</h4>
           </div>
@@ -68,7 +68,7 @@ die("Connection failed: " . $conn->connect_error);
             <h4>Leaderboard</h4>
           </div>
         </a>
-        <a class="aa" href="farmer_profile.html">
+        <a class="aa" href="farmer_profile.php">
           <div class="item">
             <h4>Profile</h4>
           </div>

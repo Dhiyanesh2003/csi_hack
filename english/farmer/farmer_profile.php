@@ -57,7 +57,7 @@ die("Connection failed: " . $conn->connect_error);
             <h4>Sell</h4>
           </div>
         </a>
-        <a class="aa" href="farmer_forum.html">
+        <a class="aa" href="farmer_forum.php">
           <div class="item">
             <h4>Forum</h4>
           </div>
@@ -67,7 +67,7 @@ die("Connection failed: " . $conn->connect_error);
             <h4>Leaderboard</h4>
           </div>
         </a>
-        <a class="aa current" href="farmer_profile.html">
+        <a class="aa current" href="farmer_profile.php">
           <div class="item">
             <h4>Profile</h4>
           </div>
@@ -102,6 +102,7 @@ die("Connection failed: " . $conn->connect_error);
           disabled
         /><br />
       </form> -->
+      <form class="Button_cont" action="save.php" method="POST">
       <div id="profile_form" class="Details">
         <label class="det">User Name: </label>
         <span id="userName"></span>
@@ -123,7 +124,7 @@ die("Connection failed: " . $conn->connect_error);
             value="Edit"
           />
         </center>
-      <form class="Button_cont" action="save.php" method="POST">
+      
         <center>
           <input
             id="save_button"
