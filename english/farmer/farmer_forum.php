@@ -63,7 +63,7 @@ die("Connection failed: " . $conn->connect_error);
             <h4>Forum</h4>
           </div>
         </a>
-        <a class="aa" href="farmer_leaderboard.html">
+        <a class="aa" href="farmer_leaderboard.php">
           <div class="item">
             <h4>Leaderboard</h4>
           </div>

@@ -1,3 +1,21 @@
+<?php
+session_start();
+
+$user_id = $_SESSION["user_id"];
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "organi5";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -35,7 +53,6 @@
 			 
 			.right-column {
 			  width: 35%;
-			  margin-top: 60px;
 			}
 			/* Left Column */
 			.left-column img {
@@ -70,8 +87,6 @@
 			}
 			.product-description p {
 			  font-size: 16px;
-			  font-weight: 300;
-			  color: #86939E;
 			  line-height: 24px;
 			}
 			
@@ -234,6 +249,38 @@
 				cursor: pointer;
 				color: #5FC81E;
 			}
+			.contai{
+				display: flex;
+				justify-content: left;
+				margin-bottom: 30px;
+			}
+			.add{
+				background-color: rgb(208, 208, 208);
+				height: 50px;
+				width: 40px;
+				font-size: 20px;
+				border: none;
+				margin: 5px;
+				border-top-right-radius: 5px;
+				border-bottom-right-radius: 5px;
+			}
+			.sub{
+				background-color: rgb(208, 208, 208);
+				height: 50px;
+				width: 40px;
+				font-size: 20px;
+				border: none;
+				margin: 5px;
+				border-top-left-radius: 5px;
+				border-bottom-left-radius: 5px;
+			}
+			button{
+				cursor: pointer;
+			}
+			#counts{
+				margin: 5px;
+				font-size: 30px;
+			}
 		</style>
 	</head>
 	<body>
@@ -281,18 +328,73 @@
 			</div>
 		</header><hr>
 		<main class="container">
- 
+			<?php 
+
+				$id = $_POST['id'];
+				$sql = "SELECT * FROM products where p_id = '".$id."';";
+				$result = $conn->query($sql);
+
+				if ($result->num_rows > 0) {
+					// output data of each row
+					while($row = $result->fetch_assoc()) {
+						echo "
+							<!-- Left Column / Headphones Image -->
+							<div class='left-column'>
+							<img class='' src='https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' />
+							</div>
+						
+						
+							<!-- Right Column -->
+							<div class='right-column'>
+							
+							<!-- Product Description -->
+							<div class='product-description'>
+								<h1>".$row['name']."</h1>
+								<h3>Health Benefits</h3>
+								<p>
+									".$row['description']."
+								</p>
+							</div>
+						
+							<!-- Product Configuration -->
+							<div class='product-configuration'>
+						
+							<!-- Product Pricing -->
+							<div class='product-price'>
+								<span><h3>Just @ Rs. ".$row['cost']."/kg at We Farm</h3></span>
+								<div class='contai'>
+								<button class='sub' onclick='sub()'>
+									-
+								</button>
+								<h1 id='counts'>1</h1>
+								<button class='add' onclick='add()'>
+									+
+								</button>
+							</div>
+								
+							</div>
+							<form action='cart.php' method='POST'>
+							<input type='text' name='id' value='".$id."' hidden >
+							<input type='text' name='count' id='count' value='1' hidden >
+							<input class='btn btn-block text-white login-button cart-btn' type='submit' value='Add to cart' />
+							</form>
+							</div>
+						";
+					}
+				}
+			?>
 		  <!-- Left Column / Headphones Image -->
-		  <div class="left-column">
+		  <!-- <div class="left-column">
 			<img class="" src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
-		  </div>
+		  </div> -->
 		 
 		 
 		  <!-- Right Column -->
-		  <div class="right-column">
-		 
+		  <!-- <div class="right-column">
+			
+			<form action="cart.php" method="POST"> -->
 			<!-- Product Description -->
-			<div class="product-description">
+			<!-- <div class="product-description">
 			  <h1>Onions</h1>
 			  <h3>Health Benefits</h3>
 			  <p>
@@ -305,21 +407,45 @@
 					<li>2.0mg Vitamin C</li>
 				</ul>
 			  </p>
-			</div>
+			</div> -->
 		 
 			<!-- Product Configuration -->
-			<div class="product-configuration">
+			<!-- <div class="product-configuration"> -->
 		 
 			<!-- Product Pricing -->
-			<div class="product-price">
+			<!-- <div class="product-price">
 			  <span><strike><p>Rs. 40/kg</p></strike></span>
 			  <span><h3>Just @ Rs. 12/kg at We Farm</h3></span>
-			  <form action="cart.php" method="POST">
-				<a href="cart.php" class="cart-btn">Add to cart</a>
-			  </form>
+			  <div className="contai">
+				<button class="sub" onclick="sub()">
+					-
+				</button>
+				<h1 className="count"></h1>
+				<button class="add" onclick="add()">
+					+
+				</button>
 			</div>
-		  </div>
+				<a href="cart.php" class="cart-btn">Add to cart</a>
+			  
+			</div>
+			<input type="text" name="id" value="1001" disabled hidden>
+			</form>
+		  </div> -->
 		</main>
 		<div class="bottom"></div>
 	</body>
+	<script>
+		function add(){
+			var count = document.getElementById("counts").innerHTML;
+			count++;
+			document.getElementById("counts").innerHTML = count ;
+			document.getElementById("count").value = count ;
+		}
+		function sub(){
+			var count = document.getElementById("counts").innerHTML;
+			if(count>1){count--;}
+			document.getElementById("counts").innerHTML = count ;
+			document.getElementById("count").value = count ;
+		}
+	</script>
 </html>

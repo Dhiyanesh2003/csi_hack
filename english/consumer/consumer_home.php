@@ -163,7 +163,7 @@
 		.but_cont {
 		text-align: center;
 		}
-		.but_cont button {
+		.but_cont #button {
 		width: 80%;
 		font-size: larger;
 		margin: 3% 0;
@@ -172,7 +172,7 @@
 		border-radius: 5px;
 		}
 
-		.but_cont button:hover {
+		.but_cont #button:hover {
 		cursor: pointer;
 		color: black;
 		background-color: #00e639;
@@ -235,7 +235,7 @@
 			<div class="search">
 				<div class="search-box">
 					<input type="text" class="find" placeholder="Search" />
-					<button type="button" class="search-btn">Search</button>
+					<button type="button" id="button" class="search-btn">Search</button>
 				</div>
 			</div>
 		</div>
@@ -278,12 +278,15 @@
 						<span>Only at Rs.".$row['cost']."/Kg</span>
 					</div>
 					<div class='but_cont'>
-						<a class='linkss' href='consumer_product_page.html'>
-							<button>Check out the Product</button>
+						<a class='linkss' href='consumer_product_page.php'>
+						<form action='consumer_product_page.php' method = 'POST'>
+							<input type='text' name='id' value= '".$row['p_id']."' hidden />
+							<input class='btn btn-block text-white login-button' id='button' type='submit' value='Check out the Product' />
+						</form>
 						</a>
 					</div>
 					<div class='but_cont'>
-						<button>Add to Cart</button>
+						<button id='button'>Add to Cart</button>
 					</div>
 				</div>
 				";
@@ -302,7 +305,7 @@
 					<span>Only at Rs.30/Kg</span>
 				</div>
 				<div class="but_cont">
-					<a class="linkss" href="consumer_product_page.html">
+					<a class="linkss" href="consumer_product_page.php">
 						<button>Check out the Recipe</button>
 					</a>
 				</div>
@@ -328,11 +331,11 @@
 				</div>
 				<div class="but_cont">
 					<a class="linkss" href="consumer_recipe_kits.html">
-						<button>Check out the Kits</button>
+						<button id="button">Check out the Kits</button>
 					</a>
 				</div>
 				<div class="but_cont">
-					<button>Add to Cart</button>
+					<button id="button">Add to Cart</button>
 				</div>
 			</div>
 
@@ -348,11 +351,11 @@
 				</div>
 				<div class="but_cont">
 					<a class="linkss" href="consumer_recipe_kits.html">
-						<button>Check out the Kits</button>
+						<button id="button">Check out the Kits</button>
 					</a>
 				</div>
 				<div class="but_cont">
-					<button>Add to Cart</button>
+					<button id="button">Add to Cart</button>
 				</div>
 			</div>
 
@@ -368,11 +371,11 @@
 				</div>
 				<div class="but_cont">
 					<a class="linkss" href="consumer_recipe_kits.html">
-						<button>Check out the Kits</button>
+						<button id="button">Check out the Kits</button>
 					</a>
 				</div>
 				<div class="but_cont">
-					<button>Add to Cart</button>
+					<button id="button">Add to Cart</button>
 				</div>
 			</div>
 
@@ -388,11 +391,11 @@
 				</div>
 				<div class="but_cont">
 					<a class="linkss" href="consumer_recipe_kits.html">
-						<button>Check out the Kits</button>
+						<button id="button">Check out the Kits</button>
 					</a>
 				</div>
 				<div class="but_cont">
-					<button>Add to Cart</button>
+					<button id="button">Add to Cart</button>
 				</div>
 			</div>
 

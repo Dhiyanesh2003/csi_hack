@@ -27,14 +27,6 @@
         display: grid;
         grid-template-columns: 1fr 2fr 4fr 1fr;
       }
-      .arrow-up {
-        color: green;
-        font-size: 40px;
-      }
-      .arrow-down {
-        color: red;
-        font-size: 40px;
-      }
 
       .aa {
         text-decoration: none;
@@ -187,7 +179,7 @@
             <h4>Forum</h4>
           </div>
         </a>
-        <a class="aa current" href="farmer_leaderboard.html">
+        <a class="aa current" href="farmer_leaderboard.php">
           <div class="item">
             <h4>Leaderboard</h4>
           </div>
@@ -213,36 +205,9 @@
             <div></div>
             <p>1</p>
             <p>Mr K. Kandhasamy</p>
-            <div class="arrow-up">&#8593;</div>
+            <p>Rs. 25,000/-</p>
           </div>
           <hr />
-          <div class="mini">
-            <div></div>
-            <p>2</p>
-            <p>Mrs. V. Maha Lakshmi</p>
-            <div class="arrow-down">&#8595;</div>
-          </div>
-          <hr />
-          <div class="mini">
-            <div></div>
-            <p>3</p>
-            <p>Mr. R. Jai Shankar</p>
-            <div class="arrow-up">&#8593;</div>
-          </div>
-          <hr />
-          <div class="mini">
-            <div></div>
-            <p>4</p>
-            <p>Mr. H. Pandian</p>
-            <div class="arrow-down">&#8595;</div>
-          </div>
-          <hr />
-          <div class="mini">
-            <div></div>
-            <p>5</p>
-            <p>Mr. F. Munnusamy</p>
-            <div class="arrow-up">&#8593;</div>
-          </div>
         </div>
       </div>
     </main>

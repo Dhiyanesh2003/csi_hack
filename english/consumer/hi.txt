@@ -1,0 +1,48 @@
+        <!-- Left Column / Headphones Image -->
+		  <div class='left-column'>
+			<img class='' src='https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' />
+		  </div>
+		 
+		 
+		  <!-- Right Column -->
+		  <div class='right-column'>
+			
+			<form action='cart.php' method='POST'>
+			<!-- Product Description -->
+			<div class='product-description'>
+			  <h1>Onions</h1>
+			  <h3>Health Benefits</h3>
+			  <p>
+				<ul>
+					<li>28kcal / 120kj</li>
+					<li>0.8g protein</li>
+					<li>6.4g carbohydrate</li>
+					<li>5.0g sugar</li>
+					<li>1.8g fibre</li>
+					<li>2.0mg Vitamin C</li>
+				</ul>
+			  </p>
+			</div>
+		 
+			<!-- Product Configuration -->
+			<div class='product-configuration'>
+		 
+			<!-- Product Pricing -->
+			<div class='product-price'>
+			  <span><strike><p>Rs. 40/kg</p></strike></span>
+			  <span><h3>Just @ Rs. 12/kg at We Farm</h3></span>
+			  <div className='contai'>
+				<button class='sub' onclick='sub()'>
+					-
+				</button>
+				<h1 className='count'></h1>
+				<button class='add' onclick='add()'>
+					+
+				</button>
+			</div>
+				<a href='cart.php' class='cart-btn'>Add to cart</a>
+			  
+			</div>
+			<input type='text' name='id' value='1001' disabled hidden>
+			</form>
+		  </div>
