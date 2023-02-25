@@ -192,3 +192,15 @@
 </body>
 
 </html>
+
+
+<?php
+
+if ( isset($_GET['id']) && $_GET['id'] == 1 ){
+    echo '<script>alert("Product added successfully")</script>';
+}
+if ( isset($_GET['id']) && $_GET['id'] == -1 ){
+    echo '<script>alert("product not added !! \n\nPlease try again later !!")</script>';
+}
+
+?>
