@@ -23,6 +23,7 @@
     <script src="../../bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="farmer_orders.css" />
+    <script src="farmer_orders.js"></script>
   </head>
   <body>
     <header>
@@ -123,9 +124,17 @@
           <p></p>
         </div>
 
-        <div>
+        <div id="status">
           <p>Confirmed &#9989;</p>
+          <button
+            class="confirmed_but"
+            data-bs-toggle="modal"
+            data-bs-target="#myModal"
+          >
+            Proceed
+          </button>
         </div>
+
         <div>
           <p>May 20 2030</p>
         </div>
@@ -163,7 +172,7 @@
         <div>
           <br />
           <hr />
-          <p>Sent<br />&#9989;</p>
+          <p>Sent&#9989;</p>
         </div>
         <div>
           <br />
@@ -172,5 +181,91 @@
         </div>
       </div>
     </main>
+
+    <div class="modal" id="myModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Check Delivery Status</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div style="display: flex; justify-content: space-between">
+              <p>Available Goods in Stock</p>
+              <p style="float: right">100</p>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <p>Required Good</p>
+              <p style="float: right">-20</p>
+            </div>
+            <br /><br />
+
+            <hr />
+            <div style="display: flex; justify-content: space-between">
+              <p>Balance Stock</p>
+              <p style="float: right">80</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#myModal2"
+            >
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal2" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Confirmation</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Confirm Delivery?</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-dismiss="modal"
+              onclick="confirmed()"
+            >
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

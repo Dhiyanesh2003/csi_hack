@@ -143,3 +143,15 @@ h2 {
 .track-order:hover {
   color: black;
 }
+
+.confirmed_but {
+  background-color: #5fc81e;
+  border-radius: 5px;
+}
+
+.confirmed_but:hover {
+  cursor: pointer;
+  background-color: black;
+  color: #5fc81e;
+  border-radius: 5px;
+}
