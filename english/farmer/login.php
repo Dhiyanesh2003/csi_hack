@@ -12,12 +12,12 @@
     else{
         
         $_SESSION['user_id'] = $_POST['user_id']; 
-        $sql = "select * from consumer_login where c_id = '".$_SESSION['user_id']."' and pass = '".$_POST['password']."'"; 
+        $sql = "select * from farmer_login where f_id = '".$_SESSION['user_id']."' and pass = '".$_POST['password']."'"; 
         $result = mysqli_query($con, $sql);  
         $row = mysqli_fetch_assoc($result);  
         $count = mysqli_num_rows($result);
         if($count == 1){  
-            header("Location: consumer_home.php");
+            header("Location: farmer_home.php");
 			exit;
         }  
         else{  

@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>We Farm</title>
+		<title>Organi5</title>
 		<link
 			rel="shortcut icon"
 			href="logo.jpeg"
@@ -176,19 +176,21 @@
 	</head>
 	<body
 		style="
-			background-image: url('https://images.unsplash.com/photo-1592079927431-3f8ced0dacc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
+			background-image: url('https://images.unsplash.com/photo-1469122312224-c5846569feb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1289&q=80');
 			background-size: cover;
 		"
 	>
 		<div class="container">
 			<div class="container form bg-white pt-5">
-				<!--change after click on sign up-->
 				<p class="text-center login-heading hide-me">login</p>
-				<form action="farmer_home.html">
+				<form
+					action="login.php"
+					method="POST"
+				>
 					<div class="container hide-me">
 						<div class="row">
 							<div class="col mt-4 pl-5 pr-5">
-								<p class="username">username</p>
+								<p class="username">User ID</p>
 								<div class="row mt-4">
 									<div class="col-2 text-center pt-1 pr-0">
 										<i
@@ -200,8 +202,10 @@
 									<div class="col-10 pl-0">
 										<input
 											type="text"
+											name="user_id"
 											placeholder="Type your username"
 											class="input-1"
+											required
 										/>
 									</div>
 								</div>
@@ -223,8 +227,10 @@
 									<div class="col-10 pl-0">
 										<input
 											type="password"
+											name="password"
 											placeholder="Type your password"
 											class="input-2"
+											required
 										/>
 									</div>
 								</div>
@@ -234,18 +240,18 @@
 						</div>
 						<div class="row mt-4">
 							<div class="col pl-5 pr-5">
-								<a href="farmer_home.html"
-									><span
-										class="btn btn-block text-white login-button"
-										>login</span
-									></a
-								>
-							</div> </div
-						><br />
-						<div>
+								<input
+									class="btn btn-block text-white login-button"
+									type="submit"
+									value="LogIn"
+								/>
+							</div>
+						</div>
+						<div
+							><br />
 							<center
 								>Don't have an account ??
-								<a href="farmer_register.html"> Sign Up</a>
+								<a href="farmer_register.php"> Sign Up</a>
 							</center>
 						</div>
 					</div>

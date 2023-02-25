@@ -13,13 +13,13 @@ die("Connection failed: " . $conn->connect_error);
 
 $user = 0;
 
-$sql = "SELECT * FROM consumer_login";
+$sql = "SELECT * FROM farmer_login";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 // output data of each row
 while($row = $result->fetch_assoc()) {
-$user = $row["c_id"];
+$user = $row["f_id"];
 }
 }
 
@@ -29,9 +29,9 @@ $PASSWORD = $_POST['PASSWORD'];
 $NUMBER = $_POST['NUMBER'];
 $EMAIL = $_POST['EMAIL'];
 $ADDRESS = $_POST['ADDRESS'];
-$sql = "INSERT INTO consumer_login VALUES ('" . $USER_ID . "','" . $USERNAME . "','" . $PASSWORD . "','" . $NUMBER . "','" . $EMAIL . "','" . $ADDRESS . "')";
+$sql = "INSERT INTO farmer_login VALUES ('" . $USER_ID . "','" . $USERNAME . "','" . $PASSWORD . "','" . $NUMBER . "','" . $EMAIL . "','" . $ADDRESS . "')";
 if ($conn->query($sql) === TRUE) {
-header("Location: consumer_login.php");
+header("Location: farmer_login.php");
 } else {
 echo "Error: " . $sql . "<br>" . $conn->error;
 }

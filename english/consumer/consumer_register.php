@@ -1,3 +1,33 @@
+<?php
+session_start();
+
+$user_id = $_SESSION["user_id"];
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "organi5";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+
+$user = 0;
+
+$sql = "SELECT * FROM consumer_login;";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+$user = $row["c_id"];
+}
+}
+$user += 1;
+?>
 <html>
     <head>
 		<title>We Farm</title>
@@ -11,10 +41,14 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="JS_files/login-form.js"></script>
 		<style>
+			body {
+				display: flex;
+				align-items: center;
+			}
 			.form{
 				width:500px;
 				border-radius:20px;
-				
+				height:135vh;
 			}
 			.login-heading{
 				font-size:40px;
@@ -110,21 +144,16 @@
 				outline: none;
 			}
 			.container{
-				margin-top: 5%;
-				height: 135%;
-			}
-			.checkboxx{
-				margin: 0px;
-				padding: 0px;
-				display: grid;
-				grid-template-columns: 1fr 1fr 1fr 1fr;
-			}
-			.check{
-				margin-top: 10px;
+				height: 1250px;
 			}
 			@media screen and (max-width:550px){
 				.form{
 					width:450px;
+				}
+				.container {
+					-ms-transform: scale(0.8);
+					-webkit-transform: scale(0.8);
+					transform: scale(0.9);
 				}
 			}
 			@media screen and (max-width:425px){
@@ -145,13 +174,28 @@
 			}
 		</style>
     </head>
-    <body style="background-image:url('https://images.unsplash.com/photo-1592079927431-3f8ced0dacc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');background-size: cover;background-attachment: fixed;">
+    <body style="background-image:url('https://images.unsplash.com/photo-1469122312224-c5846569feb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1289&q=80');background-size: cover;background-attachment: fixed;">
         <div class="container">
-            <div class="container form bg-white pt-5 mt-4 mb-3">
-                                                            <!--change after click on sign up-->
+            <div class="container form bg-white pt-5 mt-5">
+				<!--change after click on sign up-->
                 <p class="text-center login-heading hide-me">SIGN UP</p>
-				<form action="farmer_home.html">
+				<form action="register.php" method="POST">
 					<div class="container hide-me">
+						<div class="row">
+							<div class="col mt-4 pl-5 pr-5">
+								<p class="username">User ID</p>
+								<div class="row mt-4">
+									<div class="col-2 text-center pt-1 pr-0">
+										<i class="fa fa-user-o" aria-hidden="true" id="user"></i>
+									</div>
+									<div class="col-10 pl-0">
+										<input type="text" name="USERNAME" placeholder="Type your username" class='input-1' value="<?php echo $user; ?>" required disabled>
+									</div>
+								</div>
+								<hr class="hr-1">
+								<div class="hide"></div>
+							</div>
+						</div>
 						<div class="row">
 							<div class="col mt-4 pl-5 pr-5">
 								<p class="username">Username</p>
@@ -160,7 +204,7 @@
 										<i class="fa fa-user-o" aria-hidden="true" id="user"></i>
 									</div>
 									<div class="col-10 pl-0">
-										<input type="text" placeholder="Type your username" class='input-1'>
+										<input type="text" name="USERNAME" placeholder="Type your username" class='input-1' required>
 									</div>
 								</div>
 								<hr class="hr-1">
@@ -175,7 +219,7 @@
 										<i class="fa fa-lock" aria-hidden="true" id="lock"></i>
 									</div>
 									<div class="col-10 pl-0">
-										<input type="password" placeholder="Type your password" class="input-2">
+										<input type="password" name="PASSWORD" placeholder="Type your password" class="input-2" required>
 									</div>
 								</div>
 								<hr class="hr-2">
@@ -190,7 +234,7 @@
 										<i class="fa fa-lock" aria-hidden="true" id="lock"></i>
 									</div>
 									<div class="col-10 pl-0">
-										<input type="password" placeholder="Type your password again" class="input-2">
+										<input type="password" placeholder="Type your password again" class="input-2" required>
 									</div>
 								</div>
 								<hr class="hr-2">
@@ -205,7 +249,7 @@
 										<i class="fa fa-phone" aria-hidden="true" id="lock"></i>
 									</div>
 									<div class="col-10 pl-0">
-										<input type="number" placeholder="Type your phone number" class="input-2">
+										<input type="number" name="NUMBER" placeholder="Type your phone number" class="input-2" required>
 									</div>
 								</div>
 								<hr class="hr-2">
@@ -220,7 +264,7 @@
 										<i class="fa fa-envelope" aria-hidden="true" id="lock"></i>
 									</div>
 									<div class="col-10 pl-0">
-										<input type="text" placeholder="Type your email id" class="input-2">
+										<input type="text" name="EMAIL" placeholder="Type your email id" class="input-2" required>
 									</div>
 								</div>
 								<hr class="hr-2">
@@ -235,40 +279,7 @@
 										<i class="fa fa-home" aria-hidden="true" id="lock"></i>
 									</div>
 									<div class="col-10 pl-0">
-										<input type="text" placeholder="Type your address" class="input-2">
-									</div>
-								</div>
-								<hr class="hr-2">
-								<div class="hide-1"></div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col mt-4 pl-5 pr-5">
-								<p class="username">Products</p>
-									<div class="checkboxx">
-										<input class="check" type="checkbox" />
-										<label>Dairy Products</label>
-										<input class="check" type="checkbox" />
-										<label>Fruits</label>
-										<input class="check" type="checkbox" />
-										<label>Veggies</label>
-										<input class="check" type="checkbox" />
-										<label>Nuts</label>
-										<input class="check" type="checkbox" />
-										<label>spices</label>
-										<input class="check" type="checkbox" />
-										<label>Grains</label>
-									</div>
-								<div class="hide-1"></div>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col mt-4 pl-5 pr-5">
-								<div class="row mt-4">
-									<div class="col-2 text-center pt-1 pr-0">
-									</div>
-									<div class="col-10 pl-0">
-										<input type="text" placeholder="Other Products" class="input-2">
+										<input type="text" name="ADDRESS" placeholder="Type your address" class="input-2" required>
 									</div>
 								</div>
 								<hr class="hr-2">
@@ -277,7 +288,7 @@
 						</div>
 						<div class="row mt-4">
 							<div class="col pl-5 pr-5">
-								<a href="farmer_login.html"><span class="btn btn-block text-white login-button">Sign Up</span></a>
+                                <br><input class="btn btn-block text-white login-button" type="submit" value="Submit" />
 							</div>
 						</div>
 					</div>
