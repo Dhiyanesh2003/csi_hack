@@ -16,7 +16,7 @@
 				object-fit: cover;
 				text-decoration: none;
 				color: black;
-				border-botom: 1px solid #5FC81E;
+				border-bottom: 1px solid #5FC81E;
 			}
 			.aa:hover{
 				cursor: pointer;
@@ -273,7 +273,7 @@
 				</div>
 			</div>
 			<br><br><br><br>
+	</main>
+</body>
 
-		</main>
-	</body>
 </html>
