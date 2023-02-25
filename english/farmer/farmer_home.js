@@ -20,7 +20,7 @@ console.log("Weather forecast Loaded...");
 window.weatherWidgetConfig = window.weatherWidgetConfig || [];
 window.weatherWidgetConfig.push({
   selector: ".weatherWidget",
-  // apiKey: "JG3428A3BRXBAEDVAC2ZQB9H9",
+  apiKey: "JG3428A3BRXBAEDVAC2ZQB9H9",
   location: "Chennai",
   unitGroup: "metric",
   forecastDays: 5,
