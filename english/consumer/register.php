@@ -8,19 +8,32 @@ $dbname = "organi5";
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+die("Connection failed: " . $conn->connect_error);
 }
-$USER_ID= "123";
-$USERNAME= $_POST['USERNAME']; 
-$PASSWORD= $_POST['PASSWORD'];
-$NUMBER= $_POST['NUMBER'];
-$EMAIL= $_POST['EMAIL'];
-$ADDRESS= $_POST['ADDRESS'];
-$sql = "INSERT INTO loginform VALUES ('".$USER_ID."','".$USERNAME."','".$PASSWORD."','".$NUMBER."','".$EMAIL."','".$ADDRESS."')";
+
+$user = 0;
+
+$sql = "SELECT * FROM farmer_login";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+// output data of each row
+while($row = $result->fetch_assoc()) {
+$user = $row["c_id"];
+}
+}
+
+$USER_ID = $user+1;
+$USERNAME = $_POST['USERNAME'];
+$PASSWORD = $_POST['PASSWORD'];
+$NUMBER = $_POST['NUMBER'];
+$EMAIL = $_POST['EMAIL'];
+$ADDRESS = $_POST['ADDRESS'];
+$sql = "INSERT INTO farmer_login VALUES ('" . $USER_ID . "','" . $USERNAME . "','" . $PASSWORD . "','" . $NUMBER . "','" . $EMAIL . "','" . $ADDRESS . "')";
 if ($conn->query($sql) === TRUE) {
-  include "consumer_login.html";
+include "consumer_login.html";
 } else {
-  echo "Error: " . $sql . "<br>" . $conn->error;
+echo "Error: " . $sql . "<br>" . $conn->error;
 }
 
 $conn->close();
