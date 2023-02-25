@@ -16,6 +16,24 @@
     />
 
     <script>
+      //   let city_ = "";
+      //   let country_ = "";
+      //   let url = "http://ipinfo.io/json";
+      //   const locator = () => {
+      //     fetch(url)
+      //       .then((res) => res.json())
+      //       .then((out) => {
+      //         city_ = out.city;
+      //         country_ = out.country;
+      //         console.log(city_ + ", " + country_);
+      //       })
+      //       .catch((err) => {
+      //         city_ = "Chennai";
+      //       });
+      //   };
+      //   locator;
+      //   console.log(city_, country_, "asd");
+
       window.weatherWidgetConfig = window.weatherWidgetConfig || [];
       window.weatherWidgetConfig.push({
         selector: ".weatherWidget",
@@ -23,7 +41,7 @@
         location: "Chennai", //Enter an address
         unitGroup: "metric", //"us" or "metric"
         forecastDays: 5, //how many days forecast to show
-        title: "Chennai, India", //optional title to show in the
+        title: "Chennai, IN", //optional title to show in the
         showTitle: true,
         showConditions: true,
       });
