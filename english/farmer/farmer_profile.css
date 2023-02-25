@@ -29,8 +29,9 @@
   text-align: left;
   margin-top: 20px;
   margin-bottom: 20px;
-  margin-left: 50px;
+  /* margin-left: 50px; */
 }
+
 .btn {
   font-size: 20px;
   width: 200px;
