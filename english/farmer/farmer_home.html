@@ -20,10 +20,10 @@
       window.weatherWidgetConfig.push({
         selector: ".weatherWidget",
         apiKey: "JG3428A3BRXBAEDVAC2ZQB9H9", //Sign up for your personal key
-        location: "London, UK", //Enter an address
+        location: "Chennai", //Enter an address
         unitGroup: "metric", //"us" or "metric"
         forecastDays: 5, //how many days forecast to show
-        title: "London,UK", //optional title to show in the
+        title: "Chennai, India", //optional title to show in the
         showTitle: true,
         showConditions: true,
       });
@@ -54,6 +54,10 @@
         justify-content: center;
         box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
           0 17px 50px 0 rgba(0, 0, 0, 0.2);
+      }
+      .weatherWidget {
+        margin-top: 30px;
+        width: 70%;
       }
       .Deals {
         display: grid;
@@ -262,12 +266,11 @@
     <main>
       <div class="parallax-img"></div>
       <center>
-        <!-- <img class="weather" src="weather.png" /> -->
         <div class="weatherWidget"></div>
       </center>
-      <br /><br />
+      <br />
       <hr />
-      <br /><br />
+      <br />
       <div>
         <center>
           <h1 class="tode">Market Price of Veggies today</h1>
