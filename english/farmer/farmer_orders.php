@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
   <head>
     <title>Farm Com</title>
@@ -173,7 +176,9 @@
         color: #5fc81e;
         border-radius: 5px;
       }
-
+      #status{
+        margin-right: 50px;
+      }
     </style>
     <script src="farmer_orders.js"></script>
   </head>
@@ -248,7 +253,7 @@
           <hr />
         </div>
         <div>
-          <p>Confirmation</p>
+          <p id="status">Confirmation</p>
           <hr />
         </div>
 
@@ -298,7 +303,7 @@
                     <p></p>
                   </div>
                 ";
-                if($row["status"]==1){
+                if($row1["status"]==1){
                   echo "
                     <div id='status'>
                       <p>Confirmed &#9989;</p>
@@ -320,7 +325,7 @@
                 }
                 else{
                   echo "
-                  <div>
+                  <div id='status'>
                     <p>Sent&#9989;</p>
                   </div>
                   ";
@@ -368,7 +373,7 @@
         <div><br><hr><br></div>
         <div><br><hr><br></div>
         <div><br><hr><br></div> -->
-        <div>
+        <!-- <div>
           <img
             class="imgg"
             src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80"
@@ -390,7 +395,7 @@
         </div>
         <div>
           <p>Sent&#9989;</p>
-        </div>
+        </div> -->
       </div>
     </main>
 
