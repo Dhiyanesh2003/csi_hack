@@ -180,7 +180,6 @@ session_start();
         margin-right: 50px;
       }
     </style>
-    <script src="farmer_orders.js"></script>
   </head>
   <body>
     <header>
@@ -311,6 +310,7 @@ session_start();
                         class='confirmed_but'
                         data-bs-toggle='modal'
                         data-bs-target='#myModal'
+                        onclick='confirmed()'
                       >
                         Proceed
                       </button>
@@ -484,4 +484,20 @@ session_start();
       </div>
     </div>
   </body>
+  <script>
+    console.log("asd");
+
+    // var myModal = document.getElementById("myModal");
+    // var myInput = document.getElementById("myInput");
+
+    // myModal.addEventListener("shown.bs.modal", function () {
+    //   myInput.focus();
+    // });
+
+    const confirmed = () => {
+      let status_div = document.getElementById("status");
+      status_div.innerHTML = "<p>Sent&#9989;</p>";
+    };
+
+  </script>
 </html>

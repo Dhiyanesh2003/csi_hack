@@ -25,7 +25,7 @@
       }
       .mini {
         display: grid;
-        grid-template-columns: 1fr 2fr 4fr 1fr;
+        grid-template-columns: 1fr 2fr 4fr 2fr;
       }
 
       .aa {
@@ -201,15 +201,50 @@
     <main>
       <div class="container">
         <div>
-          <div class="mini">
-            <div></div>
-            <p>1</p>
-            <p>Mr K. Kandhasamy</p>
-            <p>Rs. 25,000/-</p>
-          </div>
-          <hr />
+          <?php
+              $host = "localhost";  
+              $user = "root";  
+              $password = "";
+              $db_name = "organi5"; 
+              $counttt = 0;
+              $conn = mysqli_connect($host, $user, $password, $db_name);  
+              if(mysqli_connect_errno()) {  
+                die("Failed to connect with MySQL: ". mysqli_connect_error());  
+              }
+
+              $sql = "SELECT * FROM leaderboard order by score desc;";
+              $result = $conn->query($sql);
+
+              $prize = 25000;
+              $countt = 1;
+
+              if ($result->num_rows > 0) {
+                // output data of each row
+                while($row = $result->fetch_assoc()) {
+                  $sql1 = "SELECT * FROM farmer_login where f_id = '".$row['f_id']."';";
+                  $result1 = $conn->query($sql1);
+                  if ($result1->num_rows > 0) {
+                    // output data of each row
+                    while($row1 = $result1->fetch_assoc()) {
+                      echo "
+                        <div class='mini'>
+                          <div></div>
+                          <p>".$countt."</p>
+                          <p>".$row1['username']."</p>
+                          <p id='last'>Rs. ".$prize."/-</p>
+                        </div>
+                        <hr />
+                      ";
+                      $prize -= 5000;
+                      $countt++;
+                    }
+                  }
+                }
+              }
+          ?>
         </div>
       </div>
     </main>
   </body>
 </html>
+          

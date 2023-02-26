@@ -110,7 +110,6 @@
             <span>$".$row['cost']."</span>
           </div>
           <div class='but_cont'>
-            <button>Add to Cart</button>
           </div>
         </div>
         ";
