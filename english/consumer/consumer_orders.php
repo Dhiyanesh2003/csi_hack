@@ -19,6 +19,7 @@
       font-weight: bold;
       color: #00e639;
       background-color: black;
+      border-radius: 7px;
     }
 
     .rate_but:hover {
@@ -62,6 +63,7 @@
       object-fit: cover;
       text-decoration: none;
       color: black;
+      font-weight: bolder !important;
     }
 
     .aa:hover {
@@ -70,7 +72,9 @@
     }
 
     .contt {
+      padding-top: 10px;
       display: grid;
+      align-items: center;
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5fr;
       position: -webkit-sticky;
       position: sticky;
@@ -81,8 +85,8 @@
     .h1 {
       color: #00e639;
       text-align: center;
-      font-size: 30px;
-      font-family: "Pacifico", cursive;
+      /* font-size: 30px; */
+      font-weight: bold;
       margin-top: 10px;
     }
 
@@ -110,7 +114,7 @@
       height: 40px;
       font-size: 15px;
       width: 300px;
-      margin-top: 25px;
+      /* margin-top: 25px; */
       margin-left: 150px;
     }
 
@@ -138,7 +142,7 @@
     .search-btn {
       height: 40px;
       width: 100px;
-      margin-top: 25px;
+      /* margin-top: 25px; */
       background-color: black;
       color: #5fc81e;
       font-size: 15px;
@@ -316,16 +320,14 @@
   <header>
     <div class="contt">
       <div>
-        <h1 class="h1">
-          <span class="bl">Far</span><span class="gr">Com</span>
-        </h1>
+        <h1 class="h1"><span class="bl">Far</span><span class="gr">Com</span></h1>
       </div>
       <a class="aa" href="consumer_home.php">
         <div class="item">
           <h4>Home</h4>
         </div>
       </a>
-      <a class="aa current" href="consumer_orders.html">
+      <a class="aa current" href="consumer_orders.php">
         <div class="item">
           <h4>Orders</h4>
         </div>
@@ -474,14 +476,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div style="display: flex; justify-content: space-between">
-            <p>Farmer Name:</p>
-            <p style="float: right">Mr.S.Muthu Kumar</p>
-          </div>
-          <div style="display: flex; justify-content: space-between">
-            <p>Good Supplied:</p>
-            <p style="float: right">Onions</p>
-          </div>
+
 
           <div style="display: flex; justify-content: center">
             <!-- <p>Balance Stock</p>
