@@ -440,8 +440,7 @@ $c_id = $_SESSION['user_id'];
                 </div>
                 <div>
                   <br />
-                  <input id='".$count."' value = '".$row['p_id']."' hidden />
-                  <a class='track-order' href='#' onclick='rate(".$row['p_id'].")'><button class='rate_but' data-bs-toggle='modal' data-bs-target='#myModal'>
+                    <a class='track-order' href='#' onclick='rate(".$row['p_id'].")'><button class='rate_but' data-bs-toggle='modal' data-bs-target='#myModal'>
                       Rate
                     </button></a>
                 </div>
@@ -559,30 +558,30 @@ $c_id = $_SESSION['user_id'];
           <div style="display: flex; justify-content: center">
             <!-- <p>Balance Stock</p>
               <p style="float: right">80</p> -->
-
+            <form action="review.php" method="POST">
             <div class="container01">
               <div class="post">
                 <div class="text">Thanks for rating us!</div>
                 <div class="edit">EDIT</div>
               </div>
               <div class="star-widget">
-                <input type="radio" name="rate" id="rate-5" />
+                <input type="radio" name="rate5" id="rate-5" />
                 <label for="rate-5" class="fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-4" />
+                <input type="radio" name="rate4" id="rate-4" />
                 <label for="rate-4" class="fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-3" />
+                <input type="radio" name="rate3" id="rate-3" />
                 <label for="rate-3" class="fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-2" />
+                <input type="radio" name="rate2" id="rate-2" />
                 <label for="rate-2" class="fas fa-star"></label>
-                <input type="radio" name="rate" id="rate-1" />
+                <input type="radio" name="rate1" id="rate-1" />
                 <label for="rate-1" class="fas fa-star"></label>
-                <form action="#">
+                <input name="id" id="secret" value="" hidden/>
                   <header></header>
                   <div class="textarea">
                     <textarea cols="30" placeholder="Describe your experience.."></textarea>
                   </div>
                   <div class="btn">
-                    <button type="submit" data-bs-dismiss="modal">
+                    <button type="submit">
                       Post
                     </button>
                   </div>
@@ -622,15 +621,16 @@ $c_id = $_SESSION['user_id'];
     };
     return false;
   };
-
+  console.log("hello");
   function rate(n) {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
+    // var x = document.getElementById("myDIV");
+    // if (x.style.display === "none") {
+    //   x.style.display = "block";
+    // } else {
+    //   x.style.display = "none";
+    // }
     document.getElementById("secret").value = n ;
+    console.log(document.getElementById("secret").value);
   }
 
 </script>
