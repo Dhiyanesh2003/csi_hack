@@ -274,7 +274,7 @@ die("Connection failed: " . $conn->connect_error);
 				border-top-left-radius: 5px;
 				border-bottom-left-radius: 5px;
 			}
-			button{
+			#submit:hover{
 				cursor: pointer;
 			}
 			#counts{
@@ -309,7 +309,7 @@ die("Connection failed: " . $conn->connect_error);
 						<h4>Forum</h4>
 					</div>
 				</a>
-				<a class="aa" href="consumer_cart.html">
+				<a class="aa" href="consumer_cart.php">
 					<div class="item">
 						<h4>Cart</h4>
 					</div>
@@ -340,7 +340,7 @@ die("Connection failed: " . $conn->connect_error);
 						echo "
 							<!-- Left Column / Headphones Image -->
 							<div class='left-column'>
-							<img class='' src='https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' />
+							<img class='' src='".$row['img']."' />
 							</div>
 						
 						
@@ -376,7 +376,7 @@ die("Connection failed: " . $conn->connect_error);
 							<form action='cart.php' method='POST'>
 							<input type='text' name='id' value='".$id."' hidden >
 							<input type='text' name='count' id='count' value='1' hidden >
-							<input class='btn btn-block text-white login-button cart-btn' type='submit' value='Add to cart' />
+							<input class='btn btn-block text-white login-button cart-btn' id='submit' type='submit' value='Add to cart' />
 							</form>
 							</div>
 						";

@@ -101,7 +101,7 @@
         echo "
         <div class='card'>
           <div class='img_cont'>
-            <img src='https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' />
+            <img src='".$row['img']."' />
           </div>
           <div class='pro_name';>
             <span>".$row['name']."</span>

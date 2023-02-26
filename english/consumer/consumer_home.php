@@ -269,7 +269,7 @@
 				echo "
 				<div class='card'>
 					<div class='img_cont'>
-						<img src='https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' />
+						<img src='".$row['img']."' />
 					</div>
 					<div class='pro_name'>
 						<span>".$row['name']."</span>
@@ -286,7 +286,7 @@
 						</a>
 					</div>
 					<div class='but_cont'>
-						<button id='button'>Add to Cart</button>
+						
 					</div>
 				</div>
 				";
@@ -315,7 +315,7 @@
 			</div> -->
 
 		</div>
-		<center>
+		<!-- <center>
 			<h1 class="tode">Recipe Kits</h1>
 		</center>
 		<div class="Deals">
@@ -397,9 +397,9 @@
 				<div class="but_cont">
 					<button id="button">Add to Cart</button>
 				</div>
-			</div>
+			</div> 
 
-			<!-- <div>
+			<div>
 				<center>
 					<a class="linkss" href="consumer_recipe_kits.html">
 						<img class="deal" src="https://images.unsplash.com/photo-1619096252214-ef06c45683e3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2FuZHdoaWNofGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
@@ -410,9 +410,9 @@
 					</a>
 				</center>
 			</div>
-			-->
+			
 		</div>
-		<br><br><br><br>
+		<br><br><br><br> -->
 
 	</main>
 </body>

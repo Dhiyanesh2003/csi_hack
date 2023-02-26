@@ -179,7 +179,7 @@ die("Connection failed: " . $conn->connect_error);
 						<h4>Forum</h4>
 					</div>
 				</a>
-				<a class="aa" href="consumer_cart.html">
+				<a class="aa" href="consumer_cart.php">
 					<div class="item">
 						<h4>Cart</h4>
 					</div>

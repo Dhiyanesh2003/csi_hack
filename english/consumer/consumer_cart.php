@@ -1,3 +1,10 @@
+<?php
+	
+	session_start();
+
+	$c_id = $_SESSION['user_id'];
+	
+?>
 <html>
 	<head>
 		<title>Farm Com</title>
@@ -182,7 +189,7 @@
 						<h4>Forum</h4>
 					</div>
 				</a>
-				<a class="aa current" href="consumer_cart.html">
+				<a class="aa current" href="consumer_cart.php">
 					<div class="item">
 						<h4>Cart</h4>
 					</div>
@@ -218,50 +225,55 @@
 					<p>Total<p><hr>
 				</div>
 				<?php
-					error_reporting(0);
-					session_start();
 					$host = "localhost";  
 					$user = "root";  
 					$password = "";
 					$db_name = "organi5"; 
-					$con = mysqli_connect($host, $user, $password, $db_name);  
+					$counttt = 0;
+					$conn = mysqli_connect($host, $user, $password, $db_name);  
 					if(mysqli_connect_errno()) {  
 						die("Failed to connect with MySQL: ". mysqli_connect_error());  
 					}
-					else{
-						$_SESSION['user_id'] = $_POST['user_id']; 
-						$sql = "select * from cart where user_id='".$user_id."'";
-						$result = mysqli_query($con, $sql);  
-						$row = mysqli_fetch_assoc($result);  
-						$count = mysqli_num_rows($result);
-						if($count >= 1){  
-							$sql = "select * from product where prod_id='".$row['prod_id']."'";
-							$result = mysqli_query($con, $sql);  
-							$row = mysqli_fetch_assoc($result);  
-							$count = mysqli_num_rows($result);
-							if($count >= 1){  
-								echo "
-									<div>
-										<img class='imgg' src='https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' />
-									</div>
-									<div>
-										<p>".$row['name']."</p>
-										<p>From Mr.S.Muthu Kumar</p>
-									</div>
-									<div>
-										<p>Rs. ".$row['price']."/kg</p>
-									</div>
-									<div>
-										<p>4 Kgs.</p>
-									</div>
-									<div>
-										<p>Rs. 84<p>
-									</div>
-								";
-							} 
+
+					$sql = "SELECT * FROM cart where c_id = '".$c_id."' and status = 1 or status = 2;";
+					$result = $conn->query($sql);
+
+					if ($result->num_rows > 0) {
+						// output data of each row
+						while($row = $result->fetch_assoc()) {
+							$sql1 = "SELECT * FROM products where p_id = '".$row['p_id']."';";
+							$result1 = $conn->query($sql1);
+							if ($result1->num_rows > 0) {
+								// output data of each row
+								while($row1 = $result1->fetch_assoc()) {
+
+									echo "
+										<div>
+											<img class='imgg' src='".$row1['img']."' />
+										</div>
+										<div>
+											<p>".$row1['name']."</p>
+										</div>
+										<div>
+											<p>Rs. ".$row1['cost']."/kg</p>
+										</div>
+										<div>
+											<p>".$row['quantity']." Kgs.</p>
+										</div>
+										<div>
+											<p>Rs. ".$row1['cost']."<p>
+										</div>
+										<div><br><hr></div>
+										<div><br><hr></div>
+										<div><br><hr></div>
+										<div><br><hr></div>
+										<div><br><hr></div>
+									";
+									$counttt++;
+								}
+							}
 						}
 					}
-				
 				?>
 				
 				<!--<div>
@@ -280,11 +292,6 @@
 				<div>
 					<br><hr><p>Rs. 90<p>
 				</div>-->
-				<div><br><hr></div>
-				<div><br><hr></div>
-				<div><br><hr></div>
-				<div><br><hr></div>
-				<div><br><hr></div>
 				<!-- <div><br><hr><p>Sub-Total: </p></div>
 				<div>
 					<br><hr><p>Rs. 174</p>
