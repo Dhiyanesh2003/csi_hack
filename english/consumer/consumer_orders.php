@@ -19,6 +19,7 @@
       font-weight: bold;
       color: #00e639;
       background-color: black;
+      border-radius: 7px;
     }
 
     .rate_but:hover {
