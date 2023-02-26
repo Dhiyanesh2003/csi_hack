@@ -496,9 +496,11 @@ session_start();
   //   myInput.focus();
   // });
 
-    const confirmed = () => {
-      let status_div = document.getElementById("statuss");
-      status_div.innerHTML = "<p>Sent&#9989;</p>";
-    }
+  const confirmed = () => {
+    let status_div = document.getElementById("statuss");
+    status_div.innerHTML = "<p>Sent&#9989;</p>";
+  }
 </script>
+
+
 </html>
