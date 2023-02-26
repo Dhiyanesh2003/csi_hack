@@ -1,3 +1,21 @@
+<?php
+session_start();
+
+$user_id = $_SESSION["user_id"];
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "organi5";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+	die("Connection failed: " . $conn->connect_error);
+}
+
+?>
 <html>
 
 <head>
