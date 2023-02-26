@@ -410,7 +410,7 @@ $c_id = $_SESSION['user_id'];
 
         $sql = "SELECT * FROM cart where c_id = '" . $c_id . "' and status = 2;";
         $result = $conn->query($sql);
-
+        $count = 1;
         if ($result->num_rows > 0) {
           // output data of each row
           while ($row = $result->fetch_assoc()) {
@@ -440,7 +440,8 @@ $c_id = $_SESSION['user_id'];
                 </div>
                 <div>
                   <br />
-                  <a class='track-order' href='#' onclick='rate()'><button class='rate_but' data-bs-toggle='modal' data-bs-target='#myModal'>
+                  <input id='".$count."' value = '".$row['p_id']."' hidden />
+                  <a class='track-order' href='#' onclick='rate(".$row['p_id'].")'><button class='rate_but' data-bs-toggle='modal' data-bs-target='#myModal'>
                       Rate
                     </button></a>
                 </div>
@@ -451,6 +452,7 @@ $c_id = $_SESSION['user_id'];
                 <div><br><hr><br></div>
                 <div><br><hr><br></div>
                 ";
+                $count++;
               }
             }
           }
@@ -621,14 +623,16 @@ $c_id = $_SESSION['user_id'];
     return false;
   };
 
-  function rate() {
+  function rate(n) {
     var x = document.getElementById("myDIV");
     if (x.style.display === "none") {
       x.style.display = "block";
     } else {
       x.style.display = "none";
     }
+    document.getElementById("secret").value = n ;
   }
+
 </script>
 
 </html>
