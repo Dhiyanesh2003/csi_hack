@@ -495,7 +495,7 @@ session_start();
     // });
 
     const confirmed = () => {
-      let status_div = document.getElementById("status");
+      let status_div = document.getElementById("statuss");
       status_div.innerHTML = "<p>Sent&#9989;</p>";
     };
 
