@@ -1,4 +1,4 @@
-console.log("asd");
+onsole.log("asd");
 
 // var myModal = document.getElementById("myModal");
 // var myInput = document.getElementById("myInput");

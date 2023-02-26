@@ -47,7 +47,7 @@ die("Connection failed: " . $conn->connect_error);
             <h4>Home</h4>
           </div>
         </a>
-        <a class="aa" href="farmer_orders.html">
+        <a class="aa" href="farmer_orders.php">
           <div class="item">
             <h4>Orders</h4>
           </div>
