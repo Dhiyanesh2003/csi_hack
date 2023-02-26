@@ -475,14 +475,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <div style="display: flex; justify-content: space-between">
-            <p>Farmer Name:</p>
-            <p style="float: right">Mr.S.Muthu Kumar</p>
-          </div>
-          <div style="display: flex; justify-content: space-between">
-            <p>Good Supplied:</p>
-            <p style="float: right">Onions</p>
-          </div>
+
 
           <div style="display: flex; justify-content: center">
             <!-- <p>Balance Stock</p>
