@@ -1,37 +1,33 @@
-		<div>
-          <img
-            class='imgg'
-            src='https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80'
-          />
-        </div>
-        <div>
-          <p>Onions</p>
-          <p>To Mr.S. Ramesh</p>
-        </div>
-        <div>
-          <p>Rs. 12/kg</p>
-        </div>
-        <div>
-          <p>4 Kgs.</p>
-        </div>
-        <div>
-          <p>Rs. 84</p>
-          <p></p>
-        </div>
+<div>
+        <img class='imgg' src='https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80' />
+      </div>
+      <div>
+        <p>Onions</p>
+      </div>
+      <div>
+        <p>Rs. 12/kg</p>
+      </div>
+      <div>
+        <p>4 Kgs.</p>
+      </div>
+      <div>
+        <p>Rs. 84</p>
+        <p></p>
+      </div>
 
-        <div id='status'>
-          <p>Confirmed &#9989;</p>
-          <button
-            class='confirmed_but'
-            data-bs-toggle='modal'
-            data-bs-target='#myModal'
-          >
-            Proceed
-          </button>
-        </div>
-        <div><br><hr><br></div>
-        <div><br><hr><br></div>
-        <div><br><hr><br></div>
-        <div><br><hr><br></div>
-        <div><br><hr><br></div>
-        <div><br><hr><br></div>
+      <div>
+        <p>Confirmed &#9989;</p>
+      </div>
+      <div>
+        <br />
+        <a class='track-order' href='#' onclick='rate()'><button class='rate_but' data-bs-toggle='modal' data-bs-target='#myModal'>
+            Rate
+          </button></a>
+      </div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div>

@@ -1,3 +1,12 @@
+<?php
+
+session_start();
+
+$c_id = $_SESSION['user_id'];
+
+echo $c_id;
+
+?>
 <html>
 
 <head>
@@ -30,7 +39,7 @@
 
     .main-container {
       display: grid;
-      grid-template-columns: 2fr 2fr 1fr 1fr 1fr 1fr 2fr;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1.5fr ;
       justify-content: center;
       text-align: center;
       margin-left: 20%;
@@ -385,14 +394,72 @@
         <hr />
       </div>
       <div>
-        <p>Confirmation</p>
+        <p>Review</p>
         <hr />
       </div>
-      <div>
-        <p>Get Order On</p>
-        <hr />
-      </div>
-      <div>
+
+
+      <?php
+        $host = "localhost";
+        $user = "root";
+        $password = "";
+        $db_name = "organi5";
+        $counttt = 0;
+        $conn = mysqli_connect($host, $user, $password, $db_name);
+        if (mysqli_connect_errno()) {
+          die("Failed to connect with MySQL: " . mysqli_connect_error());
+        }
+
+        $sql = "SELECT * FROM cart where c_id = '" . $c_id . "' and status = 2;";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+          // output data of each row
+          while ($row = $result->fetch_assoc()) {
+            $sql1 = "SELECT * FROM products where p_id = '" . $row['p_id'] . "';";
+            $result1 = $conn->query($sql1);
+
+            if ($result1->num_rows > 0) {
+              // output data of each row
+              while ($row1 = $result1->fetch_assoc()) {
+                $total = $row1['cost'] * $row1['quantity'];
+                echo "
+                <div>
+                  <img class='imgg' src='".$row1['img']."' />
+                </div>
+                <div>
+                  <p>".$row1['name']."</p>
+                </div>
+                <div>
+                  <p>Rs. ".$row1['cost']."/kg</p>
+                </div>
+                <div>
+                  <p>".$row1['quantity']." Kgs.</p>
+                </div>
+                <div>
+                  <p>Rs. ".$total."</p>
+                  <p></p>
+                </div>
+                <div>
+                  <br />
+                  <a class='track-order' href='#' onclick='rate()'><button class='rate_but' data-bs-toggle='modal' data-bs-target='#myModal'>
+                      Rate
+                    </button></a>
+                </div>
+                <div><br><hr><br></div>
+                <div><br><hr><br></div>
+                <div><br><hr><br></div>
+                <div><br><hr><br></div>
+                <div><br><hr><br></div>
+                <div><br><hr><br></div>
+                ";
+              }
+            }
+          }
+        }
+
+      ?>
+      <!-- <div>
         <img class="imgg" src="https://images.unsplash.com/photo-1620574387735-3624d75b2dbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" />
       </div>
       <div>
@@ -400,7 +467,6 @@
       </div>
       <div>
         <p>Rs. 12/kg</p>
-        <hr>
       </div>
       <div>
         <p>4 Kgs.</p>
@@ -414,13 +480,25 @@
         <p>Confirmed &#9989;</p>
       </div>
       <div>
-        <p>May 20 2030</p>
         <br />
         <a class="track-order" href="#" onclick="rate()"><button class="rate_but" data-bs-toggle="modal" data-bs-target="#myModal">
             Rate
           </button></a>
       </div>
-      <div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div>
+      <div><br><hr><br></div> -->
+
+
+
+
+
+
+      <!-- <div>
         <br />
         <hr />
         <img class="imgg" src="https://images.unsplash.com/photo-1561635741-c416a5193b6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80" />
@@ -461,7 +539,7 @@
         <a class="track-order" href="#" onclick="rate()"><button class="rate_but" data-bs-toggle="modal" data-bs-target="#myModal">
             Rate
           </button></a>
-      </div>
+      </div> -->
     </div>
     <!-- rating div -->
   </main>
