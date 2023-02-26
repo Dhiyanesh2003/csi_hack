@@ -163,6 +163,10 @@ if ($conn->connect_error) {
 			cursor: pointer;
 			color: #5FC81E;
 		}
+
+		#profile_form span{
+			margin-top: 30px;
+		}
 	</style>
 </head>
 

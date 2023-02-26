@@ -4,8 +4,6 @@ session_start();
 
 $c_id = $_SESSION['user_id'];
 
-echo $c_id;
-
 ?>
 <html>
 
