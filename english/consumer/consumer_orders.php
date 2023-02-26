@@ -397,10 +397,10 @@
       </div>
       <div>
         <p>Onions</p>
-        <p>From Mr.S.Muthu Kumar</p>
       </div>
       <div>
         <p>Rs. 12/kg</p>
+        <hr>
       </div>
       <div>
         <p>4 Kgs.</p>
