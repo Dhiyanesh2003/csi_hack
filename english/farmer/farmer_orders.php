@@ -296,6 +296,8 @@ session_start();
             // output data of each row
             while ($row1 = $result1->fetch_assoc()) {
               $total = $row['cost'] * $row['quantity'];
+              $cart_id = $row1['cart_id'];
+              $p_id = $row1['p_id'];
               echo "
                   <div>
                     <img
@@ -321,14 +323,17 @@ session_start();
                 echo "
                     <div id='status'>
                       <p>Confirmed &#9989;</p>
+                      <form action='confirmation.php' method='POST'>
+                      <input type='text' name='cart_id' value='".$cart_id."' hidden>
+                      <input type='text' name='p_id' value='".$p_id."' hidden>
                       <button
+                        type='submit'
                         class='confirmed_but'
-                        data-bs-toggle='modal'
-                        data-bs-target='#myModal2'
                         onclick='confirmed()'
                       >
                         Proceed
                       </button>
+                      </form>
                     </div>
                     <div><br><hr><br></div>
                     <div><br><hr><br></div>
@@ -463,9 +468,19 @@ session_start();
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
             Cancel
           </button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
-            Send
-          </button>
+          <form action="confirmation.php" method="POST">
+            <?php
+
+            echo "
+              <input type='text' name='cart_id' value='".$cart_id."'>
+              <input type='text' name='p_id' value='".$p_id."'>
+            ";
+
+            ?>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">
+              Send
+            </button>
+          </form>
         </div>
       </div>
     </div>
