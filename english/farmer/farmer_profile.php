@@ -32,7 +32,128 @@ die("Connection failed: " . $conn->connect_error);
       href="https://fonts.googleapis.com/css2?family=Outfit&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="farmer_profile.css" />
+    <style>
+			
+			.Details{
+				font-size: 25px;
+				margin-left: 30%;
+				margin-top: 10px;
+				width: 40%;
+				margin-bottom: 0px;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+			}
+			.det{
+				padding: 10px;
+				text-align: left;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				margin-left: 50px;
+			}
+			.btn{
+				font-size: 20px;
+				width: 200px;
+				height: 50px;
+				border-radius: 10px;
+				color: white;
+				background-color: black;
+				box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.1);
+			}
+			.btn:hover{
+				color: black;
+				background-color: white;
+				border: 1px solid;
+			}
+			
+			
+			
+			.aa{
+				padding-top: 10px;
+				text-align: center;
+				font-size: 20px;
+				object-fit: cover;
+				text-decoration: none;
+				color: black;
+			}
+			.aa:hover{
+				cursor: pointer;
+				color: #5FC81E;
+			}
+			.contt{
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5fr;
+				position: -webkit-sticky;
+				position: sticky;
+				top: 0;
+				width: 100%;
+			}
+			.h1{
+				color: #00e639;
+				text-align: center;
+				font-size: 30px;
+				font-family: 'Pacifico', cursive;
+				margin-top: 10px;
+			}
+			.search{
+				height: 50px;
+				text-align: center;
+				font-size: 25px;
+			}
+			
+			*{
+				font-family: 'Poppins', sans-serif;
+			}
+			.bl{
+				color: black;
+				font-size: 35px;
+			}
+			.gr{
+				color: #5FC81E;
+				font-size: 45px;
+			}
+			.find{
+				height: 40px;
+				font-size: 15px;
+				width: 300px;
+				margin-top: 25px;
+				margin-left: 150px;
+			}
+			.onto{
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				font-size: 20px;
+				color: #5FC81E;
+				opacity: 0.9;
+				width: 350px;
+				background-color: black;
+			}
+			h2{
+				margin: 0px;
+			}
+			.search-box{
+				display: grid;
+				grid-template-columns: 3fr 1fr;
+				margin-top: 5px;
+			}
+			.search-btn{
+				height: 40px;
+				width: 100px;
+				margin-top: 25px;
+				background-color: black;
+				color: #5FC81E;
+				font-size: 15px;
+				text-decoration: bold;
+				border-radius: 5px;
+			}
+			.search-btn:hover{
+				cursor: pointer;
+			}
+			.current{
+				cursor: pointer;
+				color: #5FC81E;
+			}
+		</style>
   </head>
   <body>
     <header>

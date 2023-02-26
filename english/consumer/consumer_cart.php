@@ -174,7 +174,7 @@
 						<h4>Home</h4>
 					</div>
 				</a>
-				<a class="aa" href="consumer_orders.html">
+				<a class="aa" href="consumer_orders.php">
 					<div class="item">
 						<h4>Orders</h4>
 					</div>
@@ -235,7 +235,7 @@
 						die("Failed to connect with MySQL: ". mysqli_connect_error());  
 					}
 
-					$sql = "SELECT * FROM cart where c_id = '".$c_id."' and status = 1 or status = 2;";
+					$sql = "SELECT * FROM cart where c_id = '".$c_id."' and status = 1;";
 					$result = $conn->query($sql);
 
 					if ($result->num_rows > 0) {
@@ -272,6 +272,7 @@
 									$counttt++;
 								}
 							}
+							$cart_id = $row['cart_id'];
 						}
 					}
 				?>
@@ -311,7 +312,10 @@
 					<hr><p>Rs. 174</p>
 				</div>-->
 			</div>
-			<form action="consumer_cart.php">
+			<form action="placeOrder.php" method="POST">
+				<?php
+					echo "<input type='text' name='cart_id' value='".$cart_id."' hidden/>";
+				?>
 				<input class="btn" type="submit" value="Place Order !! " />
 			</form>
 		</main>
